@@ -1,0 +1,1992 @@
+{
+  "model": "parakeet-ctc-1.1b",
+  "hf_id": "nvidia/parakeet-ctc-1.1b",
+  "head": "ctc",
+  "cli_decoder": "ctc",
+  "threads": 20,
+  "dtypes": [
+    "f32",
+    "q8_0"
+  ],
+  "gguf_size_mb": {
+    "f32": 4053.8129272460938,
+    "q8_0": 1455.5941772460938
+  },
+  "checkpoint_tensors": {
+    "f32": 1654,
+    "q8_0": 1654
+  },
+  "manifests": {
+    "librispeech": {
+      "n_files": 100,
+      "total_audio_sec": 901.1350625,
+      "nemo": {
+        "total_audio_sec": 901.1350625,
+        "total_proc_sec": 69.42126869189087,
+        "rtfx": 12.980676952181112,
+        "median_latency_ms": 647.8635995881632,
+        "wer_vs_truth": 0.04729347205526615,
+        "wer_vs_truth_n_files": 100,
+        "peak_rss_mb": 8939.453125,
+        "load_s": 6.729901490965858,
+        "nemo_version": "2.7.3",
+        "files": [
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0000.wav",
+            "audio_sec": 10.435,
+            "proc_s": 1.7428925210842863,
+            "text": "he hoped there would be stew for dinner turnips and carrots and bruised potatoes and fat mutton pieces to be ladled out in thick peppered flour fattened sauce"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0001.wav",
+            "audio_sec": 3.275,
+            "proc_s": 0.4206423640716821,
+            "text": "stuff it into you his belly counselled him"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0002.wav",
+            "audio_sec": 6.625,
+            "proc_s": 0.5626063650706783,
+            "text": "after early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0003.wav",
+            "audio_sec": 2.68,
+            "proc_s": 0.45492072799243033,
+            "text": "hallo bertie any good in your mind"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0004.wav",
+            "audio_sec": 5.2150625,
+            "proc_s": 0.5388524499721825,
+            "text": "number ten fresh nelly is waiting on you good night husband"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0005.wav",
+            "audio_sec": 9.635,
+            "proc_s": 0.6929925670847297,
+            "text": "the music came nearer and he recalled the words the words of shelley's fragment upon the moon wandering companionless pale for weariness"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0006.wav",
+            "audio_sec": 10.555,
+            "proc_s": 0.7037335339700803,
+            "text": "the dull light fell more faintly upon the page whereon another equation began to unfold itself slowly and to spread abroad its widening tale"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0007.wav",
+            "audio_sec": 4.275,
+            "proc_s": 0.513848332921043,
+            "text": "a cold lucid indifference reigned in his soul"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0008.wav",
+            "audio_sec": 6.73,
+            "proc_s": 0.6041441219858825,
+            "text": "the chaos in which his ardor extinguished itself was a cold indifferent knowledge of himself"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0009.wav",
+            "audio_sec": 10.575,
+            "proc_s": 0.6701978780329227,
+            "text": "at most by an alms given to a beggar whose blessing he fled from he might hope wearily to win for himself some measure of actual grace"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0010.wav",
+            "audio_sec": 4.405,
+            "proc_s": 0.5219290280947462,
+            "text": "well now ennes i declare you have a head and so has my stick"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0011.wav",
+            "audio_sec": 12.445,
+            "proc_s": 0.7053794569801539,
+            "text": "on saturday mornings when the sodality met in the chapel to recite the little office his place was a cushioned kneeling desk at the right of the altar from which he led his wing of boys through the responses"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0012.wav",
+            "audio_sec": 11.64,
+            "proc_s": 0.8159962239442393,
+            "text": "her eyes seemed to regard him with mild pity her holiness a strange light glowing faintly upon her frail flesh did not humiliate the sinner who approached her"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0013.wav",
+            "audio_sec": 7.915,
+            "proc_s": 0.6489062490873039,
+            "text": "if ever he was impelled to cast sin from him and to repent the impulse that moved him was the wish to be her knight"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0014.wav",
+            "audio_sec": 2.225,
+            "proc_s": 0.4628039440140128,
+            "text": "he tried to think how it could be"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0015.wav",
+            "audio_sec": 5.815,
+            "proc_s": 0.5456369020976126,
+            "text": "but the dusk deepening in the schoolroom covered over his thoughts the bell rang"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0016.wav",
+            "audio_sec": 3.54,
+            "proc_s": 0.6806676579872146,
+            "text": "then you can ask him questions on the catechism daedalus"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0017.wav",
+            "audio_sec": 8.87,
+            "proc_s": 0.6839440950425342,
+            "text": "stephen leaning back and drawing idly on his scribbler listened to the talk about him which heraron checked from time to time by saying"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0018.wav",
+            "audio_sec": 15.72,
+            "proc_s": 0.8780233620200306,
+            "text": "it was strange too that he found an arid pleasure in following up to the end the rigid lines of the doctrines of the church and penetrating into obscure silences only to hear and feel the more deeply his own condemnation"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0019.wav",
+            "audio_sec": 13.895,
+            "proc_s": 1.0532122640870512,
+            "text": "the sentence of st james which says that he who offends against one commandment becomes guilty of all had seemed to him first a swollen phrase until he had begun to grope in the darkness of his own state"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0020.wav",
+            "audio_sec": 16.79,
+            "proc_s": 0.7944414640078321,
+            "text": "if a man had stolen a pound in his youth and had used that pound to amass a huge fortune how much was he obliged to give back the pound he had stolen only or the pound together with the compound interest accruing upon it or all his huge fortune"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0021.wav",
+            "audio_sec": 6.55,
+            "proc_s": 0.5961402099346742,
+            "text": "if a layman in giving baptism pour the water before saying the words is the child baptized"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0022.wav",
+            "audio_sec": 11.175,
+            "proc_s": 0.6867116510402411,
+            "text": "how comes it that while the first beatitude promises the kingdom of heaven to the poor of heart the second beatitude promises also to the meek that they shall possess the land"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0023.wav",
+            "audio_sec": 13.275,
+            "proc_s": 0.7407392530003563,
+            "text": "why was the sacrament of the eucharist instituted under the two species of bread and wine if jesus christ be present body and blood soul and divinity in the bread alone and in the wine alone"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0024.wav",
+            "audio_sec": 11.655,
+            "proc_s": 0.7384093219880015,
+            "text": "if the wine change into vinegar and the host crumble into corruption after they have been consecrated is jesus christ still present under their species as god and as man"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0025.wav",
+            "audio_sec": 6.61,
+            "proc_s": 0.8244826800655574,
+            "text": "a gentle kick from the tall boy in the bench behind urged stephen to ask a difficult question"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0026.wav",
+            "audio_sec": 4.01,
+            "proc_s": 0.5271433580201119,
+            "text": "the rector did not ask for a catechism to hear the lesson from"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0027.wav",
+            "audio_sec": 2.71,
+            "proc_s": 0.4534776699729264,
+            "text": "he clasped his hands on the desk and said"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0028.wav",
+            "audio_sec": 7.83,
+            "proc_s": 0.72592621401418,
+            "text": "the retreat will begin on wednesday afternoon in honor of saint francis xavier whose feast day is saturday"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0029.wav",
+            "audio_sec": 4.67,
+            "proc_s": 0.49441842397209257,
+            "text": "on friday confession will be heard all the afternoon after beds"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0030.wav",
+            "audio_sec": 2.715,
+            "proc_s": 0.4407170320628211,
+            "text": "beware of making that mistake"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0031.wav",
+            "audio_sec": 6.615,
+            "proc_s": 0.5692630730336532,
+            "text": "stephen's heart began slowly to fold and fade with fear like a withering flower"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0032.wav",
+            "audio_sec": 4.09,
+            "proc_s": 0.5567977949976921,
+            "text": "he is called as you know the apostle of the indies"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0033.wav",
+            "audio_sec": 3.33,
+            "proc_s": 0.46423023904208094,
+            "text": "a great saint saint francis xavier"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0034.wav",
+            "audio_sec": 5.81,
+            "proc_s": 0.6050820170203224,
+            "text": "the rector paused and then shaking his clasped hands before him went on"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0035.wav",
+            "audio_sec": 3.445,
+            "proc_s": 0.47282070596702397,
+            "text": "he had the faith in him that moves mountains"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0036.wav",
+            "audio_sec": 3.25,
+            "proc_s": 0.5128705929964781,
+            "text": "a great saint saint francis xavier"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0037.wav",
+            "audio_sec": 5.21,
+            "proc_s": 0.5397413389291614,
+            "text": "in the silence their dark fire kindled the dusk into a tawny glow"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0000.wav",
+            "audio_sec": 2.085,
+            "proc_s": 0.6294685810571536,
+            "text": "he could wait no longer"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0001.wav",
+            "audio_sec": 5.415,
+            "proc_s": 0.5445820790482685,
+            "text": "for a full hour he had paced up and down waiting but he could wait no longer"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0002.wav",
+            "audio_sec": 11.6,
+            "proc_s": 0.77100952307228,
+            "text": "he set off abruptly for the bull walking rapidly lest his father's shrill whistle might call him back and in a few moments he had rounded the curve at the police barrack and was safe"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0003.wav",
+            "audio_sec": 2.175,
+            "proc_s": 0.5624222230399027,
+            "text": "the university"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0004.wav",
+            "audio_sec": 5.1750625,
+            "proc_s": 0.47953155799768865,
+            "text": "pride after satisfaction uplifted him like long slow waves"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0005.wav",
+            "audio_sec": 5.36,
+            "proc_s": 0.5128466070163995,
+            "text": "whose feet are as the feet of hearts and underneath the everlasting arms"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0006.wav",
+            "audio_sec": 5.895,
+            "proc_s": 0.5548061929875985,
+            "text": "the pride of that dim image brought back to his mind the dignity of the office he had refused"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0007.wav",
+            "audio_sec": 3.44,
+            "proc_s": 0.6377131539629772,
+            "text": "soon the whole bridge was trembling and resounding"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0008.wav",
+            "audio_sec": 14.985,
+            "proc_s": 0.9491875149542466,
+            "text": "the uncouth faces passed him two by two stained yellow or red or livid by the sea and as he strove to look at them with ease and indifference a faint stain of personal shame and commiseration rose to his own face"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0009.wav",
+            "audio_sec": 20.055,
+            "proc_s": 0.9930196419591084,
+            "text": "angry with himself he tried to hide his face from their eyes by gazing down sideways into the shallow swirling water under the bridge but he still saw a reflection therein of their top heavy silk hats and humble tape like collars and loosely hanging clerical clothes"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0010.wav",
+            "audio_sec": 3.195,
+            "proc_s": 0.5364243360236287,
+            "text": "brother mcardle brother keoff"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0011.wav",
+            "audio_sec": 20.01,
+            "proc_s": 0.9880473510129377,
+            "text": "their piety would be like their names like their faces like their clothes and it was idle for him to tell himself that their humble and contrite hearts it might be paid a far richer tribute of devotion than his had ever been a gift tenfold more acceptable than his elaborate adoration"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0012.wav",
+            "audio_sec": 15.03,
+            "proc_s": 0.8005432280478999,
+            "text": "it was idle for him to move himself to be generous towards them to tell himself that if he ever came to their gates stripped of his pride beaten and in beggar' weeds that they would be generous towards him loving him as themselves"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0013.wav",
+            "audio_sec": 16.33,
+            "proc_s": 0.8373225700343028,
+            "text": "idle and embittering finally to argue against his own dispassionate certitude that the commandment of love bade us not to love our neighbour as ourselves with the same amount and intensity of love but to love him as ourselves with the same kind of love"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0014.wav",
+            "audio_sec": 4.755,
+            "proc_s": 0.5185175290098414,
+            "text": "the phrase and the day and the scene harmonized in accord"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0015.wav",
+            "audio_sec": 3.395,
+            "proc_s": 0.5929612020263448,
+            "text": "words was it their colors"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0016.wav",
+            "audio_sec": 9.06,
+            "proc_s": 0.652419417980127,
+            "text": "they were voyaging across the deserts of the sky a host of nomads on the march voyaging high over ireland westward bound"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0017.wav",
+            "audio_sec": 11.695,
+            "proc_s": 0.7091120289405808,
+            "text": "the europe they had come from lay out there beyond the irish sea europe of strange tongues and valleied and wood begirt and citadeled and of entrenched and marthalled races"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0018.wav",
+            "audio_sec": 3.09,
+            "proc_s": 0.41685368004254997,
+            "text": "again again"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0019.wav",
+            "audio_sec": 3.155,
+            "proc_s": 0.4312008279375732,
+            "text": "a voice from beyond the world was calling"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0020.wav",
+            "audio_sec": 3.99,
+            "proc_s": 0.6423958309460431,
+            "text": "hello stephanos here comes the daedalus"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0021.wav",
+            "audio_sec": 13.37,
+            "proc_s": 0.8769832510733977,
+            "text": "their diving stone poised on its rude supports and rocking under their plunges and the rough hewn stones of the sloping breakw over which they scrambled in their horse play gleamed with cold wet lustre"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0022.wav",
+            "audio_sec": 5.635,
+            "proc_s": 0.6832537649897859,
+            "text": "he stood still in deference to their calls and parried their banter with easy words"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0023.wav",
+            "audio_sec": 7.735,
+            "proc_s": 0.6507114700507373,
+            "text": "it was a pain to see them and a sword like pain to see the signs of adolescence that made repellent their pitiable nakedness"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0024.wav",
+            "audio_sec": 2.215,
+            "proc_s": 0.5452114610234275,
+            "text": "stephano was atad loss"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0025.wav",
+            "audio_sec": 8.005,
+            "proc_s": 0.7851522649871185,
+            "text": "a moment before the ghost of the ancient kingdom of the danes had looked forth through the vesture of the haze wrapped city"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0000.wav",
+            "audio_sec": 10.725,
+            "proc_s": 0.7526534029748291,
+            "text": "you will find me continually speaking of four men titian holbein turner and tinteret in almost the same terms"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0001.wav",
+            "audio_sec": 9.04,
+            "proc_s": 0.6412711859447882,
+            "text": "they unite every quality and sometimes you will find me referring to them as colorists sometimes as chiaroscurists"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0002.wav",
+            "audio_sec": 17.96,
+            "proc_s": 0.9440850819228217,
+            "text": "by being studious of color they are studious of division and while the kioscurist devotes himself to the representation of degrees of force in one thing unseparated light the colorists have for their function the attainment of beauty by arrangement of the divisions of light"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0003.wav",
+            "audio_sec": 12.61,
+            "proc_s": 0.9100359679432586,
+            "text": "my first and principal reason was that they enforced beyond all resistance on any student who might attempt to copy them this method of laying portions of distinct hue side by side"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0004.wav",
+            "audio_sec": 10.65,
+            "proc_s": 0.610691283014603,
+            "text": "some of the touches indeed when the tint has been mixed with much water have been laid in little drops or ponds so that the pigment might crystallize hard at the edge"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0005.wav",
+            "audio_sec": 8.56,
+            "proc_s": 0.5776193160563707,
+            "text": "it is the head of a parrot with a little flower in his beak from a picture of carpaccio's one of his series of the life of saint george"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0006.wav",
+            "audio_sec": 2.4,
+            "proc_s": 0.46638105204328895,
+            "text": "then he comes to the peak of it"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0007.wav",
+            "audio_sec": 14.24,
+            "proc_s": 0.835990734049119,
+            "text": "the brown ground beneath is left for the most part one touch of black is put for the hollow two delicate lines of dark grayy define the outer curve and one little quivering touch of white draws the inner edge of the mandible"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0008.wav",
+            "audio_sec": 20.755,
+            "proc_s": 0.9890637490898371,
+            "text": "for believe me the final philosophy of art can only ratify their opinion that the beauty of a cock robin is to be red and of a grass plot to be green and the best skill of art is in instantly seizing on the manifold deliciousness of light which you can only seize by precision of instantaneous touch"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0009.wav",
+            "audio_sec": 23.06,
+            "proc_s": 1.1459428699454293,
+            "text": "now you will see in these studies that the moment the white is enclosed properly and harmonized with the other hues it becomes somehow more precious and pearly than the white paper and that i am not afraid to leave a whole field of untreated white paper all round it being sure that even the little diamonds in the round window will tell as jewels if they are gradated justly"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0010.wav",
+            "audio_sec": 6.095,
+            "proc_s": 0.5971321000251919,
+            "text": "but in this vignette copied from turner you have the two principles brought out perfectly"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0011.wav",
+            "audio_sec": 15.19,
+            "proc_s": 0.9433338600210845,
+            "text": "they are beyond all other works that i know existing dependent for their effect on low subdued tones their favourite choice in time of day being either dawn or twilight and even their brightest sunsets produced chiefly out of gayy paper"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0012.wav",
+            "audio_sec": 14.65,
+            "proc_s": 0.8059256579726934,
+            "text": "it may be that a great colorlist will use his utmost force of color as a singer his full power of voice but loud or low the virtue is in both cases always in refinement never in loudness"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0013.wav",
+            "audio_sec": 3.02,
+            "proc_s": 0.5174071459332481,
+            "text": "it must remember be one or the other"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0014.wav",
+            "audio_sec": 4.39,
+            "proc_s": 0.5381625039735809,
+            "text": "do not therefore think that the gothic school is an easy one"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0015.wav",
+            "audio_sec": 16.085,
+            "proc_s": 0.9626694500911981,
+            "text": "the law of that school is that everything shall be seen clearly or at least only in such mist or faintness as shall be delightful and i have no doubt that the best introduction to it would be the elementary practice of painting every study on a golden ground"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0016.wav",
+            "audio_sec": 16.595,
+            "proc_s": 0.9331157909473404,
+            "text": "this at once compels you to understand that the work is to be imaginative and decorative that it represents beautiful things in the clearest way but not under existing conditions and that in fact you are producing jewellers' work rather than pictures"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0017.wav",
+            "audio_sec": 4.615,
+            "proc_s": 0.5496238529449329,
+            "text": "that a style is restrained or severe does not mean that it is also erroneous"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0018.wav",
+            "audio_sec": 11.5499375,
+            "proc_s": 0.7606866569258273,
+            "text": "in all early gothic art indeed you will find failure of this kind especially distortion and rigidity which are in many respects painfully to be compared with the splendid repose of classic art"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0019.wav",
+            "audio_sec": 13.93,
+            "proc_s": 0.9316953019006178,
+            "text": "the large letter contains indeed entirely feeble and ill drawn figures that is merely childish and failing work of an inferior hand it is not characteristic of gothic or any other school"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0020.wav",
+            "audio_sec": 10.26,
+            "proc_s": 0.6468209500890225,
+            "text": "but observe you can only do this on one condition that of striving also to create in reality the beauty which you seek in imagination"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0021.wav",
+            "audio_sec": 14.02,
+            "proc_s": 0.811143646016717,
+            "text": "it will be wholly impossible for you to retain the tranquillity of temper and felicity of faith necessary for noble purist painting unless you are actively engaged in promoting the felicity and peace of practical life"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0022.wav",
+            "audio_sec": 9.63,
+            "proc_s": 0.7157043890329078,
+            "text": "you must look at him in the face fight him conquer him with what scathe you may you need not think to keep out of the way of him"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0023.wav",
+            "audio_sec": 23.67,
+            "proc_s": 1.1630625419784337,
+            "text": "the colorist says first of all as my delicious parquet was ruby so this nasty viper shall be black and then is the question can i round him off even though he is black and make him slimy and yet springy and close down clotted like a pool of black blood on the earth all the same"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0024.wav",
+            "audio_sec": 15.24,
+            "proc_s": 0.8885221560485661,
+            "text": "nothing will be more precious to you i think in the practical study of art than the conviction which will force itself on you more and more every hour of the way all things are bound together little and great in spirit and in matter"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0025.wav",
+            "audio_sec": 7.45,
+            "proc_s": 0.6393798800418153,
+            "text": "you know i have just been telling you how this school of materialism and clay involved itself at last in cloud and fire"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0026.wav",
+            "audio_sec": 20.125,
+            "proc_s": 1.0660915620392188,
+            "text": "here is an equally typical greek school landscape by wilson lost wholly in golden mist the trees so slightly drawn that you don't know if they are trees or towers and no care for color whatsoever perfectly deceptive and marvellous effect of sunshine through the mist apollo and the python"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0027.wav",
+            "audio_sec": 11.245,
+            "proc_s": 0.7340220609912649,
+            "text": "now here is raphael exactly between the two trees still drawn leaf by leaf wholly formal but beautiful mist coming gradually into the distance"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0028.wav",
+            "audio_sec": 19.005,
+            "proc_s": 0.9680434310575947,
+            "text": "well then last here is turner's greek school of the highest class and you define his art absolutely as first the displaying intensely and with the sternest intellect of natural form as it is and then the envelopment of it with cloud and fire"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0029.wav",
+            "audio_sec": 3.705,
+            "proc_s": 0.47933495906181633,
+            "text": "only there are two sorts of cloud and fire"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0030.wav",
+            "audio_sec": 1.915,
+            "proc_s": 0.5337493179831654,
+            "text": "he knows them both"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0031.wav",
+            "audio_sec": 4.25,
+            "proc_s": 0.5615503969602287,
+            "text": "there's one and there's another the dudley and the flint"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0032.wav",
+            "audio_sec": 10.985,
+            "proc_s": 0.6760031409794465,
+            "text": "it is only a pencil outline by edward byre jones in illustration of the story of psyche it is the introduction of psyche after all her troubles into heaven"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0033.wav",
+            "audio_sec": 6.625,
+            "proc_s": 0.5561209089355543,
+            "text": "every plant in the grass is set formally grows perfectly and may be realized completely"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0034.wav",
+            "audio_sec": 20.905,
+            "proc_s": 1.0008811140432954,
+            "text": "exquisite order and universal with eternal life and light this is the faith and effort of the schools of crrystel and you may describe and complete their work quite literally by taking any verses of chaucer in his tender mood and observing how he insists on the clearness and brightness first and then on the order"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0035.wav",
+            "audio_sec": 2.925,
+            "proc_s": 0.6209108980838209,
+            "text": "thus in chaucer's dream"
+          }
+        ]
+      },
+      "ours": {
+        "f32": {
+          "total_audio_sec": 901.1350639999999,
+          "total_proc_sec": 274.440116,
+          "rtfx": 3.283539874323621,
+          "median_latency_ms": 2663.353,
+          "wer_vs_truth": 0.04751569427748837,
+          "wer_vs_truth_n_files": 100,
+          "peak_rss_mb": 4384.4921875,
+          "load_s": 1.1808610000000002,
+          "gguf_size_mb": 4053.8129272460938,
+          "checkpoint_tensors": 1654,
+          "agreement_wer_vs_nemo": 0.00022222222222222223,
+          "files": [
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0000.wav",
+              "audio_sec": 10.435,
+              "proc_s": 3.117534,
+              "text": "he hoped there would be stew for dinner turnips and carrots and bruised potatoes and fat mutton pieces to be ladled out in thick peppered flour fattened sauce"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0001.wav",
+              "audio_sec": 3.275,
+              "proc_s": 1.8596110000000001,
+              "text": "stuff it into you his belly counselled him"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0002.wav",
+              "audio_sec": 6.625,
+              "proc_s": 2.398463,
+              "text": "after early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0003.wav",
+              "audio_sec": 2.68,
+              "proc_s": 1.8552339999999998,
+              "text": "hallo bertie any good in your mind"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0004.wav",
+              "audio_sec": 5.215063,
+              "proc_s": 2.300399,
+              "text": "number ten fresh nelly is waiting on you good night husband"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0005.wav",
+              "audio_sec": 9.635,
+              "proc_s": 2.7773499999999998,
+              "text": "the music came nearer and he recalled the words the words of shelley's fragment upon the moon wandering companionless pale for weariness"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0006.wav",
+              "audio_sec": 10.555,
+              "proc_s": 2.864675,
+              "text": "the dull light fell more faintly upon the page whereon another equation began to unfold itself slowly and to spread abroad its widening tale"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0007.wav",
+              "audio_sec": 4.275,
+              "proc_s": 2.1532,
+              "text": "a cold lucid indifference reigned in his soul"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0008.wav",
+              "audio_sec": 6.73,
+              "proc_s": 2.256178,
+              "text": "the chaos in which his ardor extinguished itself was a cold indifferent knowledge of himself"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0009.wav",
+              "audio_sec": 10.575,
+              "proc_s": 2.889262,
+              "text": "at most by an alms given to a beggar whose blessing he fled from he might hope wearily to win for himself some measure of actual grace"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0010.wav",
+              "audio_sec": 4.405,
+              "proc_s": 2.010357,
+              "text": "well now ennes i declare you have a head and so has my stick"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0011.wav",
+              "audio_sec": 12.445,
+              "proc_s": 3.3264560000000003,
+              "text": "on saturday mornings when the sodality met in the chapel to recite the little office his place was a cushioned kneeling desk at the right of the altar from which he led his wing of boys through the responses"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0012.wav",
+              "audio_sec": 11.64,
+              "proc_s": 3.1222109999999996,
+              "text": "her eyes seemed to regard him with mild pity her holiness a strange light glowing faintly upon her frail flesh did not humiliate the sinner who approached her"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0013.wav",
+              "audio_sec": 7.915,
+              "proc_s": 2.6655659999999997,
+              "text": "if ever he was impelled to cast sin from him and to repent the impulse that moved him was the wish to be her knight"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0014.wav",
+              "audio_sec": 2.225,
+              "proc_s": 1.786861,
+              "text": "he tried to think how it could be"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0015.wav",
+              "audio_sec": 5.815,
+              "proc_s": 2.355489,
+              "text": "but the dusk deepening in the schoolroom covered over his thoughts the bell rang"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0016.wav",
+              "audio_sec": 3.54,
+              "proc_s": 1.712082,
+              "text": "then you can ask him questions on the catechism daedalus"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0017.wav",
+              "audio_sec": 8.87,
+              "proc_s": 2.6843090000000003,
+              "text": "stephen leaning back and drawing idly on his scribbler listened to the talk about him which heraron checked from time to time by saying"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0018.wav",
+              "audio_sec": 15.72,
+              "proc_s": 3.608756,
+              "text": "it was strange too that he found an arid pleasure in following up to the end the rigid lines of the doctrines of the church and penetrating into obscure silences only to hear and feel the more deeply his own condemnation"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0019.wav",
+              "audio_sec": 13.895,
+              "proc_s": 3.5509250000000003,
+              "text": "the sentence of st james which says that he who offends against one commandment becomes guilty of all had seemed to him first a swollen phrase until he had begun to grope in the darkness of his own state"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0020.wav",
+              "audio_sec": 16.79,
+              "proc_s": 3.819912,
+              "text": "if a man had stolen a pound in his youth and had used that pound to amass a huge fortune how much was he obliged to give back the pound he had stolen only or the pound together with the compound interest accruing upon it or all his huge fortune"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0021.wav",
+              "audio_sec": 6.55,
+              "proc_s": 2.296287,
+              "text": "if a layman in giving baptism pour the water before saying the words is the child baptized"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0022.wav",
+              "audio_sec": 11.175,
+              "proc_s": 3.1845239999999997,
+              "text": "how comes it that while the first beatitude promises the kingdom of heaven to the poor of heart the second beatitude promises also to the meek that they shall possess the land"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0023.wav",
+              "audio_sec": 13.275,
+              "proc_s": 3.286562,
+              "text": "why was the sacrament of the eucharist instituted under the two species of bread and wine if jesus christ be present body and blood soul and divinity in the bread alone and in the wine alone"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0024.wav",
+              "audio_sec": 11.655,
+              "proc_s": 3.172831,
+              "text": "if the wine change into vinegar and the host crumble into corruption after they have been consecrated is jesus christ still present under their species as god and as man"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0025.wav",
+              "audio_sec": 6.61,
+              "proc_s": 2.438943,
+              "text": "a gentle kick from the tall boy in the bench behind urged stephen to ask a difficult question"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0026.wav",
+              "audio_sec": 4.01,
+              "proc_s": 2.031626,
+              "text": "the rector did not ask for a catechism to hear the lesson from"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0027.wav",
+              "audio_sec": 2.71,
+              "proc_s": 1.734075,
+              "text": "he clasped his hands on the desk and said"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0028.wav",
+              "audio_sec": 7.83,
+              "proc_s": 2.505725,
+              "text": "the retreat will begin on wednesday afternoon in honor of saint francis xavier whose feast day is saturday"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0029.wav",
+              "audio_sec": 4.67,
+              "proc_s": 2.261688,
+              "text": "on friday confession will be heard all the afternoon after beds"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0030.wav",
+              "audio_sec": 2.715,
+              "proc_s": 1.920793,
+              "text": "beware of making that mistake"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0031.wav",
+              "audio_sec": 6.615,
+              "proc_s": 2.225745,
+              "text": "stephen's heart began slowly to fold and fade with fear like a withering flower"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0032.wav",
+              "audio_sec": 4.09,
+              "proc_s": 2.072759,
+              "text": "he is called as you know the apostle of the indies"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0033.wav",
+              "audio_sec": 3.33,
+              "proc_s": 1.983514,
+              "text": "a great saint saint francis xavier"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0034.wav",
+              "audio_sec": 5.81,
+              "proc_s": 2.2841799999999997,
+              "text": "the rector paused and then shaking his clasped hands before him went on"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0035.wav",
+              "audio_sec": 3.445,
+              "proc_s": 2.08573,
+              "text": "he had the faith in him that moves mountains"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0036.wav",
+              "audio_sec": 3.25,
+              "proc_s": 1.868536,
+              "text": "a great saint saint francis xavier"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0037.wav",
+              "audio_sec": 5.21,
+              "proc_s": 2.2860169999999997,
+              "text": "in the silence their dark fire kindled the dusk into a tawny glow"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0000.wav",
+              "audio_sec": 2.085,
+              "proc_s": 1.797633,
+              "text": "he could wait no longer"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0001.wav",
+              "audio_sec": 5.415,
+              "proc_s": 2.33345,
+              "text": "for a full hour he had paced up and down waiting but he could wait no longer"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0002.wav",
+              "audio_sec": 11.6,
+              "proc_s": 3.172513,
+              "text": "he set off abruptly for the bull walking rapidly lest his father's shrill whistle might call him back and in a few moments he had rounded the curve at the police barrack and was safe"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0003.wav",
+              "audio_sec": 2.175,
+              "proc_s": 1.888942,
+              "text": "the university"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0004.wav",
+              "audio_sec": 5.175063,
+              "proc_s": 2.160872,
+              "text": "pride after satisfaction uplifted him like long slow waves"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0005.wav",
+              "audio_sec": 5.36,
+              "proc_s": 2.297248,
+              "text": "whose feet are as the feet of hearts and underneath the everlasting arms"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0006.wav",
+              "audio_sec": 5.895,
+              "proc_s": 2.3166379999999998,
+              "text": "the pride of that dim image brought back to his mind the dignity of the office he had refused"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0007.wav",
+              "audio_sec": 3.44,
+              "proc_s": 1.861359,
+              "text": "soon the whole bridge was trembling and resounding"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0008.wav",
+              "audio_sec": 14.985,
+              "proc_s": 3.535812,
+              "text": "the uncouth faces passed him two by two stained yellow or red or livid by the sea and as he strove to look at them with ease and indifference a faint stain of personal shame and commiseration rose to his own face"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0009.wav",
+              "audio_sec": 20.055,
+              "proc_s": 4.5043050000000004,
+              "text": "angry with himself he tried to hide his face from their eyes by gazing down sideways into the shallow swirling water under the bridge but he still saw a reflection therein of their top heavy silk hats and humble tape like collars and loosely hanging clerical clothes"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0010.wav",
+              "audio_sec": 3.195,
+              "proc_s": 1.65651,
+              "text": "brother mcardle brother keoff"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0011.wav",
+              "audio_sec": 20.01,
+              "proc_s": 4.352124,
+              "text": "their piety would be like their names like their faces like their clothes and it was idle for him to tell himself that their humble and contrite hearts it might be paid a far richer tribute of devotion than his had ever been a gift tenfold more acceptable than his elaborate adoration"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0012.wav",
+              "audio_sec": 15.03,
+              "proc_s": 3.804723,
+              "text": "it was idle for him to move himself to be generous towards them to tell himself that if he ever came to their gates stripped of his pride beaten and in beggar' weeds that they would be generous towards him loving him as themselves"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0013.wav",
+              "audio_sec": 16.33,
+              "proc_s": 3.591324,
+              "text": "idle and embittering finally to argue against his own dispassionate certitude that the commandment of love bade us not to love our neighbour as ourselves with the same amount and intensity of love but to love him as ourselves with the same kind of love"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0014.wav",
+              "audio_sec": 4.755,
+              "proc_s": 2.257729,
+              "text": "the phrase and the day and the scene harmonized in accord"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0015.wav",
+              "audio_sec": 3.395,
+              "proc_s": 1.88201,
+              "text": "words was it their colors"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0016.wav",
+              "audio_sec": 9.06,
+              "proc_s": 2.797875,
+              "text": "they were voyaging across the deserts of the sky a host of nomads on the march voyaging high over ireland westward bound"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0017.wav",
+              "audio_sec": 11.695,
+              "proc_s": 3.0978359999999996,
+              "text": "the europe they had come from lay out there beyond the irish sea europe of strange tongues and valleied and wood begirt and citadeled and of entrenched and marthalled races"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0018.wav",
+              "audio_sec": 3.09,
+              "proc_s": 1.847388,
+              "text": "again again"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0019.wav",
+              "audio_sec": 3.155,
+              "proc_s": 2.0440679999999998,
+              "text": "a voice from beyond the world was calling"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0020.wav",
+              "audio_sec": 3.99,
+              "proc_s": 2.422965,
+              "text": "hello stephanos here comes the daedalus"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0021.wav",
+              "audio_sec": 13.37,
+              "proc_s": 3.520326,
+              "text": "their diving stone poised on its rude supports and rocking under their plunges and the rough hewn stones of the sloping breakw over which they scrambled in their horse play gleamed with cold wet lustre"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0022.wav",
+              "audio_sec": 5.635,
+              "proc_s": 2.331367,
+              "text": "he stood still in deference to their calls and parried their banter with easy words"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0023.wav",
+              "audio_sec": 7.735,
+              "proc_s": 2.7520439999999997,
+              "text": "it was a pain to see them and a sword like pain to see the signs of adolescence that made repellent their pitiable nakedness"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0024.wav",
+              "audio_sec": 2.215,
+              "proc_s": 1.732626,
+              "text": "stephano was atad loss"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0025.wav",
+              "audio_sec": 8.005,
+              "proc_s": 2.669565,
+              "text": "a moment before the ghost of the ancient kingdom of the danes had looked forth through the vesture of the haze wrapped city"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0000.wav",
+              "audio_sec": 10.725,
+              "proc_s": 2.983772,
+              "text": "you will find me continually speaking of four men titian holbein turner and tinteret in almost the same terms"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0001.wav",
+              "audio_sec": 9.04,
+              "proc_s": 2.875119,
+              "text": "they unite every quality and sometimes you will find me referring to them as colorists sometimes as chiaroscurists"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0002.wav",
+              "audio_sec": 17.96,
+              "proc_s": 3.754066,
+              "text": "by being studious of colour they are studious of division and while the kioscurist devotes himself to the representation of degrees of force in one thing unseparated light the colorists have for their function the attainment of beauty by arrangement of the divisions of light"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0003.wav",
+              "audio_sec": 12.61,
+              "proc_s": 3.193677,
+              "text": "my first and principal reason was that they enforced beyond all resistance on any student who might attempt to copy them this method of laying portions of distinct hue side by side"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0004.wav",
+              "audio_sec": 10.65,
+              "proc_s": 3.006565,
+              "text": "some of the touches indeed when the tint has been mixed with much water have been laid in little drops or ponds so that the pigment might crystallize hard at the edge"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0005.wav",
+              "audio_sec": 8.56,
+              "proc_s": 2.66114,
+              "text": "it is the head of a parrot with a little flower in his beak from a picture of carpaccio's one of his series of the life of saint george"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0006.wav",
+              "audio_sec": 2.4,
+              "proc_s": 1.671929,
+              "text": "then he comes to the peak of it"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0007.wav",
+              "audio_sec": 14.24,
+              "proc_s": 3.513964,
+              "text": "the brown ground beneath is left for the most part one touch of black is put for the hollow two delicate lines of dark grayy define the outer curve and one little quivering touch of white draws the inner edge of the mandible"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0008.wav",
+              "audio_sec": 20.755,
+              "proc_s": 4.288003,
+              "text": "for believe me the final philosophy of art can only ratify their opinion that the beauty of a cock robin is to be red and of a grass plot to be green and the best skill of art is in instantly seizing on the manifold deliciousness of light which you can only seize by precision of instantaneous touch"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0009.wav",
+              "audio_sec": 23.06,
+              "proc_s": 4.445810000000001,
+              "text": "now you will see in these studies that the moment the white is enclosed properly and harmonized with the other hues it becomes somehow more precious and pearly than the white paper and that i am not afraid to leave a whole field of untreated white paper all round it being sure that even the little diamonds in the round window will tell as jewels if they are gradated justly"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0010.wav",
+              "audio_sec": 6.095,
+              "proc_s": 2.229259,
+              "text": "but in this vignette copied from turner you have the two principles brought out perfectly"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0011.wav",
+              "audio_sec": 15.19,
+              "proc_s": 3.630907,
+              "text": "they are beyond all other works that i know existing dependent for their effect on low subdued tones their favourite choice in time of day being either dawn or twilight and even their brightest sunsets produced chiefly out of gayy paper"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0012.wav",
+              "audio_sec": 14.65,
+              "proc_s": 3.259801,
+              "text": "it may be that a great colorlist will use his utmost force of color as a singer his full power of voice but loud or low the virtue is in both cases always in refinement never in loudness"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0013.wav",
+              "audio_sec": 3.02,
+              "proc_s": 1.79723,
+              "text": "it must remember be one or the other"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0014.wav",
+              "audio_sec": 4.39,
+              "proc_s": 2.150368,
+              "text": "do not therefore think that the gothic school is an easy one"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0015.wav",
+              "audio_sec": 16.085,
+              "proc_s": 3.8128789999999997,
+              "text": "the law of that school is that everything shall be seen clearly or at least only in such mist or faintness as shall be delightful and i have no doubt that the best introduction to it would be the elementary practice of painting every study on a golden ground"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0016.wav",
+              "audio_sec": 16.595,
+              "proc_s": 3.860942,
+              "text": "this at once compels you to understand that the work is to be imaginative and decorative that it represents beautiful things in the clearest way but not under existing conditions and that in fact you are producing jewellers' work rather than pictures"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0017.wav",
+              "audio_sec": 4.615,
+              "proc_s": 1.989881,
+              "text": "that a style is restrained or severe does not mean that it is also erroneous"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0018.wav",
+              "audio_sec": 11.549938,
+              "proc_s": 3.03931,
+              "text": "in all early gothic art indeed you will find failure of this kind especially distortion and rigidity which are in many respects painfully to be compared with the splendid repose of classic art"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0019.wav",
+              "audio_sec": 13.93,
+              "proc_s": 3.461587,
+              "text": "the large letter contains indeed entirely feeble and ill drawn figures that is merely childish and failing work of an inferior hand it is not characteristic of gothic or any other school"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0020.wav",
+              "audio_sec": 10.26,
+              "proc_s": 2.9425079999999997,
+              "text": "but observe you can only do this on one condition that of striving also to create in reality the beauty which you seek in imagination"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0021.wav",
+              "audio_sec": 14.02,
+              "proc_s": 3.646158,
+              "text": "it will be wholly impossible for you to retain the tranquillity of temper and felicity of faith necessary for noble purist painting unless you are actively engaged in promoting the felicity and peace of practical life"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0022.wav",
+              "audio_sec": 9.63,
+              "proc_s": 2.836105,
+              "text": "you must look at him in the face fight him conquer him with what scathe you may you need not think to keep out of the way of him"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0023.wav",
+              "audio_sec": 23.67,
+              "proc_s": 4.792159,
+              "text": "the colorist says first of all as my delicious parquet was ruby so this nasty viper shall be black and then is the question can i round him off even though he is black and make him slimy and yet springy and close down clotted like a pool of black blood on the earth all the same"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0024.wav",
+              "audio_sec": 15.24,
+              "proc_s": 3.582451,
+              "text": "nothing will be more precious to you i think in the practical study of art than the conviction which will force itself on you more and more every hour of the way all things are bound together little and great in spirit and in matter"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0025.wav",
+              "audio_sec": 7.45,
+              "proc_s": 2.8662170000000002,
+              "text": "you know i have just been telling you how this school of materialism and clay involved itself at last in cloud and fire"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0026.wav",
+              "audio_sec": 20.125,
+              "proc_s": 4.3638699999999995,
+              "text": "here is an equally typical greek school landscape by wilson lost wholly in golden mist the trees so slightly drawn that you don't know if they are trees or towers and no care for color whatsoever perfectly deceptive and marvellous effect of sunshine through the mist apollo and the python"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0027.wav",
+              "audio_sec": 11.245,
+              "proc_s": 2.874729,
+              "text": "now here is raphael exactly between the two trees still drawn leaf by leaf wholly formal but beautiful mist coming gradually into the distance"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0028.wav",
+              "audio_sec": 19.005,
+              "proc_s": 4.15355,
+              "text": "well then last here is turner's greek school of the highest class and you define his art absolutely as first the displaying intensely and with the sternest intellect of natural form as it is and then the envelopment of it with cloud and fire"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0029.wav",
+              "audio_sec": 3.705,
+              "proc_s": 1.9556410000000002,
+              "text": "only there are two sorts of cloud and fire"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0030.wav",
+              "audio_sec": 1.915,
+              "proc_s": 1.703725,
+              "text": "he knows them both"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0031.wav",
+              "audio_sec": 4.25,
+              "proc_s": 1.920021,
+              "text": "there's one and there's another the dudley and the flint"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0032.wav",
+              "audio_sec": 10.985,
+              "proc_s": 2.900676,
+              "text": "it is only a pencil outline by edward byre jones in illustration of the story of psyche it is the introduction of psyche after all her troubles into heaven"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0033.wav",
+              "audio_sec": 6.625,
+              "proc_s": 2.4646709999999996,
+              "text": "every plant in the grass is set formally grows perfectly and may be realized completely"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0034.wav",
+              "audio_sec": 20.905,
+              "proc_s": 4.525399999999999,
+              "text": "exquisite order and universal with eternal life and light this is the faith and effort of the schools of crrystel and you may describe and complete their work quite literally by taking any verses of chaucer in his tender mood and observing how he insists on the clearness and brightness first and then on the order"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0035.wav",
+              "audio_sec": 2.925,
+              "proc_s": 1.902409,
+              "text": "thus in chaucer's dream"
+            }
+          ]
+        },
+        "q8_0": {
+          "total_audio_sec": 901.1350639999999,
+          "total_proc_sec": 167.55050599999998,
+          "rtfx": 5.3782891231614665,
+          "median_latency_ms": 1495.444,
+          "wer_vs_truth": 0.04751569427748837,
+          "wer_vs_truth_n_files": 100,
+          "peak_rss_mb": 1780.26171875,
+          "load_s": 0.425496,
+          "gguf_size_mb": 1455.5941772460938,
+          "checkpoint_tensors": 1654,
+          "agreement_wer_vs_nemo": 0.00044444444444444447,
+          "files": [
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0000.wav",
+              "audio_sec": 10.435,
+              "proc_s": 1.8519400000000001,
+              "text": "he hoped there would be stew for dinner turnips and carrots and bruised potatoes and fat mutton pieces to be ladled out in thick peppered flour fattened sauce"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0001.wav",
+              "audio_sec": 3.275,
+              "proc_s": 0.877247,
+              "text": "stuff it into you his belly counselled him"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0002.wav",
+              "audio_sec": 6.625,
+              "proc_s": 1.4989919999999999,
+              "text": "after early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0003.wav",
+              "audio_sec": 2.68,
+              "proc_s": 0.8264199999999999,
+              "text": "hallo bertie any good in your mind"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0004.wav",
+              "audio_sec": 5.215063,
+              "proc_s": 1.00804,
+              "text": "number ten fresh nelly is waiting on you good night husband"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0005.wav",
+              "audio_sec": 9.635,
+              "proc_s": 1.805127,
+              "text": "the music came nearer and he recalled the words the words of shelley's fragment upon the moon wandering companionless pale for weariness"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0006.wav",
+              "audio_sec": 10.555,
+              "proc_s": 1.728848,
+              "text": "the dull light fell more faintly upon the page whereon another equation began to unfold itself slowly and to spread abroad its widening tale"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0007.wav",
+              "audio_sec": 4.275,
+              "proc_s": 1.05946,
+              "text": "a cold lucid indifference reigned in his soul"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0008.wav",
+              "audio_sec": 6.73,
+              "proc_s": 1.325723,
+              "text": "the chaos in which his ardor extinguished itself was a cold indifferent knowledge of himself"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0009.wav",
+              "audio_sec": 10.575,
+              "proc_s": 1.9876880000000001,
+              "text": "at most by an alms given to a beggar whose blessing he fled from he might hope wearily to win for himself some measure of actual grace"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0010.wav",
+              "audio_sec": 4.405,
+              "proc_s": 1.1583109999999999,
+              "text": "well now ennes i declare you have a head and so has my stick"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0011.wav",
+              "audio_sec": 12.445,
+              "proc_s": 2.14982,
+              "text": "on saturday mornings when the sodality met in the chapel to recite the little office his place was a cushioned kneeling desk at the right of the altar from which he led his wing of boys through the responses"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0012.wav",
+              "audio_sec": 11.64,
+              "proc_s": 1.8441869999999998,
+              "text": "her eyes seemed to regard him with mild pity her holiness a strange light glowing faintly upon her frail flesh did not humiliate the sinner who approached her"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0013.wav",
+              "audio_sec": 7.915,
+              "proc_s": 1.597878,
+              "text": "if ever he was impelled to cast sin from him and to repent the impulse that moved him was the wish to be her knight"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0014.wav",
+              "audio_sec": 2.225,
+              "proc_s": 0.668673,
+              "text": "he tried to think how it could be"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0015.wav",
+              "audio_sec": 5.815,
+              "proc_s": 1.1708800000000001,
+              "text": "but the dusk deepening in the schoolroom covered over his thoughts the bell rang"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0016.wav",
+              "audio_sec": 3.54,
+              "proc_s": 0.894808,
+              "text": "then you can ask him questions on the catechism daedalus"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0017.wav",
+              "audio_sec": 8.87,
+              "proc_s": 1.914299,
+              "text": "stephen leaning back and drawing idly on his scribbler listened to the talk about him which heraron checked from time to time by saying"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0018.wav",
+              "audio_sec": 15.72,
+              "proc_s": 2.501639,
+              "text": "it was strange too that he found an arid pleasure in following up to the end the rigid lines of the doctrines of the church and penetrating into obscure silences only to hear and feel the more deeply his own condemnation"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0019.wav",
+              "audio_sec": 13.895,
+              "proc_s": 2.3736729999999997,
+              "text": "the sentence of st james which says that he who offends against one commandment becomes guilty of all had seemed to him first a swollen phrase until he had begun to grope in the darkness of his own state"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0020.wav",
+              "audio_sec": 16.79,
+              "proc_s": 2.569237,
+              "text": "if a man had stolen a pound in his youth and had used that pound to amass a huge fortune how much was he obliged to give back the pound he had stolen only or the pound together with the compound interest accruing upon it or all his huge fortune"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0021.wav",
+              "audio_sec": 6.55,
+              "proc_s": 1.268212,
+              "text": "if a layman in giving baptism pour the water before saying the words is the child baptized"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0022.wav",
+              "audio_sec": 11.175,
+              "proc_s": 2.0172529999999997,
+              "text": "how comes it that while the first beatitude promises the kingdom of heaven to the poor of heart the second beatitude promises also to the meek that they shall possess the land"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0023.wav",
+              "audio_sec": 13.275,
+              "proc_s": 2.231238,
+              "text": "why was the sacrament of the eucharist instituted under the two species of bread and wine if jesus christ be present body and blood soul and divinity in the bread alone and in the wine alone"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0024.wav",
+              "audio_sec": 11.655,
+              "proc_s": 2.021042,
+              "text": "if the wine change into vinegar and the host crumble into corruption after they have been consecrated is jesus christ still present under their species as god and as man"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0025.wav",
+              "audio_sec": 6.61,
+              "proc_s": 1.289025,
+              "text": "a gentle kick from the tall boy in the bench behind urged stephen to ask a difficult question"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0026.wav",
+              "audio_sec": 4.01,
+              "proc_s": 0.862514,
+              "text": "the rector did not ask for a catechism to hear the lesson from"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0027.wav",
+              "audio_sec": 2.71,
+              "proc_s": 0.721647,
+              "text": "he clasped his hands on the desk and said"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0028.wav",
+              "audio_sec": 7.83,
+              "proc_s": 1.451055,
+              "text": "the retreat will begin on wednesday afternoon in honor of saint francis xavier whose feast day is saturday"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0029.wav",
+              "audio_sec": 4.67,
+              "proc_s": 1.078624,
+              "text": "on friday confession will be heard all the afternoon after beds"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0030.wav",
+              "audio_sec": 2.715,
+              "proc_s": 0.694187,
+              "text": "beware of making that mistake"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0031.wav",
+              "audio_sec": 6.615,
+              "proc_s": 1.2765719999999998,
+              "text": "stephen's heart began slowly to fold and fade with fear like a withering flower"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0032.wav",
+              "audio_sec": 4.09,
+              "proc_s": 0.8862089999999999,
+              "text": "he is called as you know the apostle of the indies"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0033.wav",
+              "audio_sec": 3.33,
+              "proc_s": 0.7737809999999999,
+              "text": "a great saint saint francis xavier"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0034.wav",
+              "audio_sec": 5.81,
+              "proc_s": 1.199356,
+              "text": "the rector paused and then shaking his clasped hands before him went on"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0035.wav",
+              "audio_sec": 3.445,
+              "proc_s": 0.824963,
+              "text": "he had the faith in him that moves mountains"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0036.wav",
+              "audio_sec": 3.25,
+              "proc_s": 1.00162,
+              "text": "a great saint saint francis xavier"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134686-0037.wav",
+              "audio_sec": 5.21,
+              "proc_s": 1.1065399999999999,
+              "text": "in the silence their dark fire kindled the dusk into a tawny glow"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0000.wav",
+              "audio_sec": 2.085,
+              "proc_s": 0.854549,
+              "text": "he could wait no longer"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0001.wav",
+              "audio_sec": 5.415,
+              "proc_s": 1.2814619999999999,
+              "text": "for a full hour he had paced up and down waiting but he could wait no longer"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0002.wav",
+              "audio_sec": 11.6,
+              "proc_s": 2.0834520000000003,
+              "text": "he set off abruptly for the bull walking rapidly lest his father's shrill whistle might call him back and in a few moments he had rounded the curve at the police barrack and was safe"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0003.wav",
+              "audio_sec": 2.175,
+              "proc_s": 0.737154,
+              "text": "the university"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0004.wav",
+              "audio_sec": 5.175063,
+              "proc_s": 1.096569,
+              "text": "pride after satisfaction uplifted him like long slow waves"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0005.wav",
+              "audio_sec": 5.36,
+              "proc_s": 1.237489,
+              "text": "whose feet are as the feet of hearts and underneath the everlasting arms"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0006.wav",
+              "audio_sec": 5.895,
+              "proc_s": 1.213132,
+              "text": "the pride of that dim image brought back to his mind the dignity of the office he had refused"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0007.wav",
+              "audio_sec": 3.44,
+              "proc_s": 0.975989,
+              "text": "soon the whole bridge was trembling and resounding"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0008.wav",
+              "audio_sec": 14.985,
+              "proc_s": 2.48525,
+              "text": "the uncouth faces passed him two by two stained yellow or red or livid by the sea and as he strove to look at them with ease and indifference a faint stain of personal shame and commiseration rose to his own face"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0009.wav",
+              "audio_sec": 20.055,
+              "proc_s": 3.199253,
+              "text": "angry with himself he tried to hide his face from their eyes by gazing down sideways into the shallow swirling water under the bridge but he still saw a reflection therein of their top heavy silk hats and humble tape like collars and loosely hanging clerical clothes"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0010.wav",
+              "audio_sec": 3.195,
+              "proc_s": 0.788208,
+              "text": "brother mcardle brother keoff"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0011.wav",
+              "audio_sec": 20.01,
+              "proc_s": 3.2386019999999998,
+              "text": "their piety would be like their names like their faces like their clothes and it was idle for him to tell himself that their humble and contrite hearts it might be paid a far richer tribute of devotion than his had ever been a gift tenfold more acceptable than his elaborate adoration"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0012.wav",
+              "audio_sec": 15.03,
+              "proc_s": 2.736505,
+              "text": "it was idle for him to move himself to be generous towards them to tell himself that if he ever came to their gates stripped of his pride beaten and in beggar' weeds that they would be generous towards him loving him as themselves"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0013.wav",
+              "audio_sec": 16.33,
+              "proc_s": 2.7994920000000003,
+              "text": "idle and embittering finally to argue against his own dispassionate certitude that the commandment of love bade us not to love our neighbour as ourselves with the same amount and intensity of love but to love him as ourselves with the same kind of love"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0014.wav",
+              "audio_sec": 4.755,
+              "proc_s": 1.092265,
+              "text": "the phrase and the day and the scene harmonized in accord"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0015.wav",
+              "audio_sec": 3.395,
+              "proc_s": 0.936082,
+              "text": "words was it their colors"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0016.wav",
+              "audio_sec": 9.06,
+              "proc_s": 1.631777,
+              "text": "they were voyaging across the deserts of the sky a host of nomads on the march voyaging high over ireland westward bound"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0017.wav",
+              "audio_sec": 11.695,
+              "proc_s": 1.9375609999999999,
+              "text": "the europe they had come from lay out there beyond the irish sea europe of strange tongues and valleied and wood begirt and citadeled and of entrenched and marthalled races"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0018.wav",
+              "audio_sec": 3.09,
+              "proc_s": 1.046884,
+              "text": "again again"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0019.wav",
+              "audio_sec": 3.155,
+              "proc_s": 0.932889,
+              "text": "a voice from beyond the world was calling"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0020.wav",
+              "audio_sec": 3.99,
+              "proc_s": 0.982069,
+              "text": "hello stephanos here comes the daedalus"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0021.wav",
+              "audio_sec": 13.37,
+              "proc_s": 2.155906,
+              "text": "their diving stone poised on its rude supports and rocking under their plunges and the rough hewn stones of the sloping breakw over which they scrambled in their horse play gleamed with cold wet lustre"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0022.wav",
+              "audio_sec": 5.635,
+              "proc_s": 1.4821410000000002,
+              "text": "he stood still in deference to their calls and parried their banter with easy words"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0023.wav",
+              "audio_sec": 7.735,
+              "proc_s": 1.4918959999999999,
+              "text": "it was a pain to see them and a sword like pain to see the signs of adolescence that made repellent their pitiable nakedness"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0024.wav",
+              "audio_sec": 2.215,
+              "proc_s": 0.7503479999999999,
+              "text": "stephano was atad loss"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1089-134691-0025.wav",
+              "audio_sec": 8.005,
+              "proc_s": 1.6483299999999999,
+              "text": "a moment before the ghost of the ancient kingdom of the danes had looked forth through the vesture of the haze wrapped city"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0000.wav",
+              "audio_sec": 10.725,
+              "proc_s": 2.078823,
+              "text": "you will find me continually speaking of four men titian holbein turner and tinteret in almost the same terms"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0001.wav",
+              "audio_sec": 9.04,
+              "proc_s": 1.487633,
+              "text": "they unite every quality and sometimes you will find me referring to them as colorists sometimes as chiaroscurists"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0002.wav",
+              "audio_sec": 17.96,
+              "proc_s": 2.951564,
+              "text": "by being studious of colour they are studious of division and while the kiosscurist devotes himself to the representation of degrees of force in one thing unseparated light the colorists have for their function the attainment of beauty by arrangement of the divisions of light"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0003.wav",
+              "audio_sec": 12.61,
+              "proc_s": 2.184243,
+              "text": "my first and principal reason was that they enforced beyond all resistance on any student who might attempt to copy them this method of laying portions of distinct hue side by side"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0004.wav",
+              "audio_sec": 10.65,
+              "proc_s": 1.775954,
+              "text": "some of the touches indeed when the tint has been mixed with much water have been laid in little drops or ponds so that the pigment might crystallize hard at the edge"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0005.wav",
+              "audio_sec": 8.56,
+              "proc_s": 1.5974359999999999,
+              "text": "it is the head of a parrot with a little flower in his beak from a picture of carpaccio's one of his series of the life of saint george"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0006.wav",
+              "audio_sec": 2.4,
+              "proc_s": 0.635181,
+              "text": "then he comes to the peak of it"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0007.wav",
+              "audio_sec": 14.24,
+              "proc_s": 2.366775,
+              "text": "the brown ground beneath is left for the most part one touch of black is put for the hollow two delicate lines of dark grayy define the outer curve and one little quivering touch of white draws the inner edge of the mandible"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0008.wav",
+              "audio_sec": 20.755,
+              "proc_s": 3.242696,
+              "text": "for believe me the final philosophy of art can only ratify their opinion that the beauty of a cock robin is to be red and of a grass plot to be green and the best skill of art is in instantly seizing on the manifold deliciousness of light which you can only seize by precision of instantaneous touch"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0009.wav",
+              "audio_sec": 23.06,
+              "proc_s": 3.806548,
+              "text": "now you will see in these studies that the moment the white is enclosed properly and harmonized with the other hues it becomes somehow more precious and pearly than the white paper and that i am not afraid to leave a whole field of untreated white paper all round it being sure that even the little diamonds in the round window will tell as jewels if they are gradated justly"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0010.wav",
+              "audio_sec": 6.095,
+              "proc_s": 1.446915,
+              "text": "but in this vignette copied from turner you have the two principles brought out perfectly"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0011.wav",
+              "audio_sec": 15.19,
+              "proc_s": 2.5234,
+              "text": "they are beyond all other works that i know existing dependent for their effect on low subdued tones their favourite choice in time of day being either dawn or twilight and even their brightest sunsets produced chiefly out of gayy paper"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0012.wav",
+              "audio_sec": 14.65,
+              "proc_s": 2.469078,
+              "text": "it may be that a great colorlist will use his utmost force of color as a singer his full power of voice but loud or low the virtue is in both cases always in refinement never in loudness"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0013.wav",
+              "audio_sec": 3.02,
+              "proc_s": 0.9591900000000001,
+              "text": "it must remember be one or the other"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0014.wav",
+              "audio_sec": 4.39,
+              "proc_s": 0.928591,
+              "text": "do not therefore think that the gothic school is an easy one"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0015.wav",
+              "audio_sec": 16.085,
+              "proc_s": 2.7744839999999997,
+              "text": "the law of that school is that everything shall be seen clearly or at least only in such mist or faintness as shall be delightful and i have no doubt that the best introduction to it would be the elementary practice of painting every study on a golden ground"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0016.wav",
+              "audio_sec": 16.595,
+              "proc_s": 2.7555970000000003,
+              "text": "this at once compels you to understand that the work is to be imaginative and decorative that it represents beautiful things in the clearest way but not under existing conditions and that in fact you are producing jewellers' work rather than pictures"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0017.wav",
+              "audio_sec": 4.615,
+              "proc_s": 1.0021369999999998,
+              "text": "that a style is restrained or severe does not mean that it is also erroneous"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0018.wav",
+              "audio_sec": 11.549938,
+              "proc_s": 1.9925229999999998,
+              "text": "in all early gothic art indeed you will find failure of this kind especially distortion and rigidity which are in many respects painfully to be compared with the splendid repose of classic art"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0019.wav",
+              "audio_sec": 13.93,
+              "proc_s": 2.4580659999999996,
+              "text": "the large letter contains indeed entirely feeble and ill drawn figures that is merely childish and failing work of an inferior hand it is not characteristic of gothic or any other school"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0020.wav",
+              "audio_sec": 10.26,
+              "proc_s": 1.677578,
+              "text": "but observe you can only do this on one condition that of striving also to create in reality the beauty which you seek in imagination"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0021.wav",
+              "audio_sec": 14.02,
+              "proc_s": 2.212662,
+              "text": "it will be wholly impossible for you to retain the tranquillity of temper and felicity of faith necessary for noble purist painting unless you are actively engaged in promoting the felicity and peace of practical life"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0022.wav",
+              "audio_sec": 9.63,
+              "proc_s": 1.632109,
+              "text": "you must look at him in the face fight him conquer him with what scathe you may you need not think to keep out of the way of him"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0023.wav",
+              "audio_sec": 23.67,
+              "proc_s": 3.921152,
+              "text": "the colorist says first of all as my delicious parquet was ruby so this nasty viper shall be black and then is the question can i round him off even though he is black and make him slimy and yet springy and close down clotted like a pool of black blood on the earth all the same"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0024.wav",
+              "audio_sec": 15.24,
+              "proc_s": 2.429941,
+              "text": "nothing will be more precious to you i think in the practical study of art than the conviction which will force itself on you more and more every hour of the way all things are bound together little and great in spirit and in matter"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0025.wav",
+              "audio_sec": 7.45,
+              "proc_s": 1.5111269999999999,
+              "text": "you know i have just been telling you how this school of materialism and clay involved itself at last in cloud and fire"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0026.wav",
+              "audio_sec": 20.125,
+              "proc_s": 3.475525,
+              "text": "here is an equally typical greek school landscape by wilson lost wholly in golden mist the trees so slightly drawn that you don't know if they are trees or towers and no care for color whatsoever perfectly deceptive and marvellous effect of sunshine through the mist apollo and the python"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0027.wav",
+              "audio_sec": 11.245,
+              "proc_s": 1.913706,
+              "text": "now here is raphael exactly between the two trees still drawn leaf by leaf wholly formal but beautiful mist coming gradually into the distance"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0028.wav",
+              "audio_sec": 19.005,
+              "proc_s": 3.0590300000000004,
+              "text": "well then last here is turner's greek school of the highest class and you define his art absolutely as first the displaying intensely and with the sternest intellect of natural form as it is and then the envelopment of it with cloud and fire"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0029.wav",
+              "audio_sec": 3.705,
+              "proc_s": 0.968739,
+              "text": "only there are two sorts of cloud and fire"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0030.wav",
+              "audio_sec": 1.915,
+              "proc_s": 0.663788,
+              "text": "he knows them both"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0031.wav",
+              "audio_sec": 4.25,
+              "proc_s": 1.0550899999999999,
+              "text": "there's one and there's another the dudley and the flint"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0032.wav",
+              "audio_sec": 10.985,
+              "proc_s": 1.786513,
+              "text": "it is only a pencil outline by edward byre jones in illustration of the story of psyche it is the introduction of psyche after all her troubles into heaven"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0033.wav",
+              "audio_sec": 6.625,
+              "proc_s": 1.347834,
+              "text": "every plant in the grass is set formally grows perfectly and may be realized completely"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0034.wav",
+              "audio_sec": 20.905,
+              "proc_s": 3.3729609999999997,
+              "text": "exquisite order and universal with eternal life and light this is the faith and effort of the schools of crrystel and you may describe and complete their work quite literally by taking any verses of chaucer in his tender mood and observing how he insists on the clearness and brightness first and then on the order"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/librispeech/1188-133604-0035.wav",
+              "audio_sec": 2.925,
+              "proc_s": 0.7539349999999999,
+              "text": "thus in chaucer's dream"
+            }
+          ]
+        }
+      }
+    },
+    "diverse": {
+      "n_files": 4,
+      "total_audio_sec": 254.6605625,
+      "nemo": {
+        "total_audio_sec": 254.6605625,
+        "total_proc_sec": 17.065993613912724,
+        "rtfx": 14.92210581236787,
+        "median_latency_ms": 1636.1847899970599,
+        "wer_vs_truth": 0.0,
+        "wer_vs_truth_n_files": 1,
+        "peak_rss_mb": 8927.75,
+        "load_s": 7.888958102092147,
+        "nemo_version": "2.7.3",
+        "files": [
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/diverse/jfk.wav",
+            "audio_sec": 11.0,
+            "proc_s": 0.6521115970099345,
+            "text": "and so my fellow americans ask not what your country can do for you ask what you can do for your country"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/diverse/i_have_a_dream.wav",
+            "audio_sec": 180.0214375,
+            "proc_s": 13.214172969921492,
+            "text": "i have the pleasure to present to you dr martin luther king i am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation five score years ago a great american in whose symbolic shadow we stand today signed the emancipation proclamation this momentous decree came as a great beacon light of hope to millions of negro slaves who had been seared in the flames of withering injustice it came as a joyous daybreak to end the long night of their captivity but one hundred years later the negro still is not free one hundred years later the life of the negro is still sadly crippled by the manacles of segregation and the chains of discrimination one hundred years later the negro lives on a lonely island of poverty in the midst of a vast ocean of material prosperity one hundred years later the negro has still languished in the corners of american society and finds himself in exile in his own land and so we've come here today to dramatize a shameful condition in a sense we've come to our nation's capital to cash a check when the architects of our republic wrote the magnificent words of the constitution and the declaration of independence they were signing a promissory note to which every american was to fall heir this note was a promise that all men yes black men as well as white men would be guaranteed"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/diverse/antirez_italian.wav",
+            "audio_sec": 59.997375,
+            "proc_s": 2.620257982984185,
+            "text": "first of all couldaorder i one of the primie video fat probably went the primo short oil second or third so so cestogana leera proposito de langeros the mr farmer producted a questesto agricultore sigidiano malto giovan maltoedalista you nonosco person and mendema o degiso pic anda d conziar velo perla second of all time for unpopu car respect to ultravolta alora traaltro vistoroa rangeaombro nol loconosco and anjem motivo d publigitale is who i product yeah and an aruno sponsor in guestoanale perquvachcio buligita gratuita l range perqu grarado okay inllstrogios has andrepeggiore la grande distributiona cicom or may anpically fr verdura van no combra la merch al i grandi mercati oro fruit t callido citrova collitas"
+          },
+          {
+            "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/diverse/test_speech.wav",
+            "audio_sec": 3.64175,
+            "proc_s": 0.5794510639971122,
+            "text": "hello this is a test of the voxtstrol speech to text system"
+          }
+        ]
+      },
+      "ours": {
+        "f32": {
+          "total_audio_sec": 254.660562,
+          "total_proc_sec": 61.258118,
+          "rtfx": 4.157172474675112,
+          "median_latency_ms": 7193.5515000000005,
+          "wer_vs_truth": 0.0,
+          "wer_vs_truth_n_files": 1,
+          "peak_rss_mb": 6440.05859375,
+          "load_s": 1.178816,
+          "gguf_size_mb": 4053.8129272460938,
+          "checkpoint_tensors": 1654,
+          "agreement_wer_vs_nemo": 0.0,
+          "files": [
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/diverse/jfk.wav",
+              "audio_sec": 11.0,
+              "proc_s": 3.048822,
+              "text": "and so my fellow americans ask not what your country can do for you ask what you can do for your country"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/diverse/i_have_a_dream.wav",
+              "audio_sec": 180.021437,
+              "proc_s": 45.015926,
+              "text": "i have the pleasure to present to you dr martin luther king i am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation five score years ago a great american in whose symbolic shadow we stand today signed the emancipation proclamation this momentous decree came as a great beacon light of hope to millions of negro slaves who had been seared in the flames of withering injustice it came as a joyous daybreak to end the long night of their captivity but one hundred years later the negro still is not free one hundred years later the life of the negro is still sadly crippled by the manacles of segregation and the chains of discrimination one hundred years later the negro lives on a lonely island of poverty in the midst of a vast ocean of material prosperity one hundred years later the negro has still languished in the corners of american society and finds himself in exile in his own land and so we've come here today to dramatize a shameful condition in a sense we've come to our nation's capital to cash a check when the architects of our republic wrote the magnificent words of the constitution and the declaration of independence they were signing a promissory note to which every american was to fall heir this note was a promise that all men yes black men as well as white men would be guaranteed"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/diverse/antirez_italian.wav",
+              "audio_sec": 59.997375,
+              "proc_s": 11.338281,
+              "text": "first of all couldaorder i one of the primie video fat probably went the primo short oil second or third so so cestogana leera proposito de langeros the mr farmer producted a questesto agricultore sigidiano malto giovan maltoedalista you nonosco person and mendema o degiso pic anda d conziar velo perla second of all time for unpopu car respect to ultravolta alora traaltro vistoroa rangeaombro nol loconosco and anjem motivo d publigitale is who i product yeah and an aruno sponsor in guestoanale perquvachcio buligita gratuita l range perqu grarado okay inllstrogios has andrepeggiore la grande distributiona cicom or may anpically fr verdura van no combra la merch al i grandi mercati oro fruit t callido citrova collitas"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/diverse/test_speech.wav",
+              "audio_sec": 3.64175,
+              "proc_s": 1.855089,
+              "text": "hello this is a test of the voxtstrol speech to text system"
+            }
+          ]
+        },
+        "q8_0": {
+          "total_audio_sec": 254.660562,
+          "total_proc_sec": 60.673969,
+          "rtfx": 4.197196362743305,
+          "median_latency_ms": 6360.075,
+          "wer_vs_truth": 0.0,
+          "wer_vs_truth_n_files": 1,
+          "peak_rss_mb": 3840.5,
+          "load_s": 0.424528,
+          "gguf_size_mb": 1455.5941772460938,
+          "checkpoint_tensors": 1654,
+          "agreement_wer_vs_nemo": 0.00847457627118644,
+          "files": [
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/diverse/jfk.wav",
+              "audio_sec": 11.0,
+              "proc_s": 1.777689,
+              "text": "and so my fellow americans ask not what your country can do for you ask what you can do for your country"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/diverse/i_have_a_dream.wav",
+              "audio_sec": 180.021437,
+              "proc_s": 47.075907,
+              "text": "i have the pleasure to present to you dr martin luther king i am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation five score years ago a great american in whose symbolic shadow we stand today signed the emancipation proclamation this momentous decree came as a great beacon light of hope to millions of negro slaves who had been seared in the flames of withering injustice it came as a joyous daybreak to end the long night of their captivity but one hundred years later the negro still is not free one hundred years later the life of the negro is still sadly crippled by the manacles of segregation and the chains of discrimination one hundred years later the negro lives on a lonely island of poverty in the midst of a vast ocean of material prosperity one hundred years later the negro has still languished in the corners of american society and finds himself in exile in his own land and so we've come here today to dramatize a shameful condition in a sense we've come to our nation's capital to cash a check when the architects of our republic wrote the magnificent words of the constitution and the declaration of independence they were signing a promissory note to which every american was to fall heir this note was a promise that all men yes black men as well as white men would be guaranteed"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/diverse/antirez_italian.wav",
+              "audio_sec": 59.997375,
+              "proc_s": 10.942461,
+              "text": "first of all couldunaorder i one of the primie video fat probably went the primo short oil second or third so so cestogana leera proposito de langeros the mr farmer producted a questest to agricultore sigidiano malto giovan maltoedalista you nonosco person and mendema o degiso pic anda d conziar velo perla second of all time for unpopu car respect to ultravolta alora traaltro vistoroa rangeaombro nol loconosco and anjem motivo d publigitale is who i product yeah and an aruno sponsor in guestoanale perquvachcio buligita gratuita l range perqu grarado okay inllstrogos has andrepeggiore la grande distributiona cicom or may anpically fr verdura van no combra la merch al i grandi mercati oro fruit t callido citrova collitas"
+            },
+            {
+              "path": "/home/mudler/_git/parakeet.cpp/benchmarks/audio/diverse/test_speech.wav",
+              "audio_sec": 3.64175,
+              "proc_s": 0.877912,
+              "text": "hello this is a test of the voxtstrol speech to text system"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "nemo_version": "2.7.3"
+}

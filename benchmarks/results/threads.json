@@ -1,0 +1,88 @@
+{
+  "model": "parakeet-tdt_ctc-110m",
+  "hf_id": "nvidia/parakeet-tdt_ctc-110m",
+  "head": "rnnt",
+  "dtype": "f32",
+  "manifest": "diverse",
+  "n_files": 4,
+  "sweep": [
+    {
+      "threads": 1,
+      "nemo": {
+        "rtfx": 12.803446293506507,
+        "median_latency_ms": 1674.4972895248793,
+        "peak_rss_mb": 2530.80078125
+      },
+      "ours": {
+        "rtfx": 12.515072480961441,
+        "median_latency_ms": 1761.9944999999998,
+        "peak_rss_mb": 1959.3359375
+      }
+    },
+    {
+      "threads": 2,
+      "nemo": {
+        "rtfx": 20.932934969327537,
+        "median_latency_ms": 991.8951000436209,
+        "peak_rss_mb": 2538.1640625
+      },
+      "ours": {
+        "rtfx": 21.76490941293077,
+        "median_latency_ms": 1048.3895,
+        "peak_rss_mb": 1959.171875
+      }
+    },
+    {
+      "threads": 4,
+      "nemo": {
+        "rtfx": 28.054919622309527,
+        "median_latency_ms": 734.355365508236,
+        "peak_rss_mb": 2541.3984375
+      },
+      "ours": {
+        "rtfx": 34.82047137292115,
+        "median_latency_ms": 670.073,
+        "peak_rss_mb": 1958.96875
+      }
+    },
+    {
+      "threads": 8,
+      "nemo": {
+        "rtfx": 37.33901694188781,
+        "median_latency_ms": 505.9950685244985,
+        "peak_rss_mb": 2561.6875
+      },
+      "ours": {
+        "rtfx": 48.34546561501368,
+        "median_latency_ms": 496.61699999999996,
+        "peak_rss_mb": 1958.53125
+      }
+    },
+    {
+      "threads": 16,
+      "nemo": {
+        "rtfx": 37.40137275691163,
+        "median_latency_ms": 445.53619500948116,
+        "peak_rss_mb": 2566.4609375
+      },
+      "ours": {
+        "rtfx": 50.889019578221166,
+        "median_latency_ms": 472.524,
+        "peak_rss_mb": 1957.9765625
+      }
+    },
+    {
+      "threads": 20,
+      "nemo": {
+        "rtfx": 28.827943505217554,
+        "median_latency_ms": 894.4197054952383,
+        "peak_rss_mb": 2575.93359375
+      },
+      "ours": {
+        "rtfx": 43.369318582416,
+        "median_latency_ms": 631.379,
+        "peak_rss_mb": 1957.234375
+      }
+    }
+  ]
+}

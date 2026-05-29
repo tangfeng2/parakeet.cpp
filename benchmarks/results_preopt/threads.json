@@ -1,0 +1,75 @@
+{
+  "model": "parakeet-tdt_ctc-110m",
+  "hf_id": "nvidia/parakeet-tdt_ctc-110m",
+  "head": "rnnt",
+  "dtype": "f32",
+  "manifest": "diverse",
+  "n_files": 4,
+  "sweep": [
+    {
+      "threads": 1,
+      "nemo": {
+        "rtfx": 12.864707672562107,
+        "median_latency_ms": 1645.8899744902737,
+        "peak_rss_mb": 2533.59375
+      },
+      "ours": {
+        "rtfx": 6.525935140660935,
+        "median_latency_ms": 3876.7045000000003,
+        "peak_rss_mb": 2806.2109375
+      }
+    },
+    {
+      "threads": 2,
+      "nemo": {
+        "rtfx": 20.78910529517184,
+        "median_latency_ms": 980.4266265127808,
+        "peak_rss_mb": 2540.09765625
+      },
+      "ours": {
+        "rtfx": 10.561128356990068,
+        "median_latency_ms": 2549.2545,
+        "peak_rss_mb": 2806.0625
+      }
+    },
+    {
+      "threads": 4,
+      "nemo": {
+        "rtfx": 27.901697546100856,
+        "median_latency_ms": 693.447619501967,
+        "peak_rss_mb": 2543.61328125
+      },
+      "ours": {
+        "rtfx": 15.296831335597357,
+        "median_latency_ms": 1866.0885,
+        "peak_rss_mb": 2805.88671875
+      }
+    },
+    {
+      "threads": 8,
+      "nemo": {
+        "rtfx": 35.88414553328055,
+        "median_latency_ms": 490.14557199552655,
+        "peak_rss_mb": 2563.453125
+      },
+      "ours": {
+        "rtfx": 18.17909373141744,
+        "median_latency_ms": 1611.5625,
+        "peak_rss_mb": 2805.328125
+      }
+    },
+    {
+      "threads": 20,
+      "nemo": {
+        "rtfx": 32.64629860788379,
+        "median_latency_ms": 665.8175339689478,
+        "peak_rss_mb": 2577.25
+      },
+      "ours": {
+        "rtfx": 10.936711042862871,
+        "median_latency_ms": 2628.9714999999997,
+        "peak_rss_mb": 2804.81640625
+      }
+    }
+  ]
+}
