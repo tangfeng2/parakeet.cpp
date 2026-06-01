@@ -38,6 +38,23 @@ state) + `<EOU>`/`<EOB>` timed events, exposed via `parakeet_capi_stream_*` and
 `parakeet-cli transcribe --stream`.  The streaming transcript matches NeMo's
 cache-aware streaming byte-for-byte.
 
+## Performance invariants (do not regress)
+
+These are measured wins. An agent "simplifying" them has caused real regressions
+before, so do not change them without an A/B benchmark that proves parity.
+
+- **Keep the persistent `ggml_gallocr`** in `src/backend.cpp`. Reusing one
+  allocator across the many tiny per-utterance graphs (no per-call alloc/free) is
+  the core throughput lever on CPU and GPU. Do NOT replace it with
+  `ggml_backend_sched` on the fast path: sched re-plans the graph split on every
+  call and regressed CUDA by 7-23% when it did. The scheduler is used ONLY as a
+  per-graph fallback, when the active GPU backend lacks a kernel for some op
+  (so the unsupported op can run on CPU); when every op is supported, the fast
+  gallocr path runs. If you think gallocr can go, you are about to reintroduce
+  that regression.
+- **Zero-copy weights.** `clone_weight` returns loader tensors directly so the
+  same device buffer is reused every utterance; do not copy weights per call.
+
 ## Repository layout
 
 ```
@@ -97,7 +114,7 @@ docs/
   quantization.md   , quantization allowlist, policy, measured size + WER per type
   parity.md         , full model coverage matrix + per-stage tensor parity
 .github/workflows/
-  ci.yml            , build job (per-push) + closed-loop job (dispatch-only)
+  ci.yml            , build job (per-push) + closed-loop job (pull_request + dispatch)
 ```
 
 ## Build
@@ -305,17 +322,18 @@ See `models/MANIFEST.md` for the expected set of published GGUFs per checkpoint.
 
 `.github/workflows/ci.yml` has two jobs:
 
-1. **build** (runs on every push + pull_request): cmake configure + build +
-   `ctest -LE model`.  Fast (no model, no Python env needed).  This is the
-   per-push gate.
+1. **build** (every push + pull_request): cmake build + `ctest -LE model`. Fast.
+2. **closed-loop** (pull_request + `workflow_dispatch`): converts the 110m
+   checkpoint and asserts `parakeet-cli transcribe --decoder tdt` matches the
+   reference transcript below. Heavy (NeMo download, ~60 min); not on every push.
 
-2. **closed-loop** (runs ONLY on `workflow_dispatch`, manual trigger): sets up
-   the Python venv, installs CPU torch + `scripts/requirements.txt`, builds the
-   project, converts `nvidia/parakeet-tdt_ctc-110m` to GGUF (~440 MB download),
-   runs `parakeet-cli transcribe --decoder tdt` on `tests/fixtures/speech.wav`,
-   and asserts the output is byte-for-byte identical to the committed NeMo TDT
-   reference transcript.  Fails the job on any mismatch.  Not triggered on push
-   because it needs network + model.
+### Reference transcript
+
+`tests/fixtures/speech.wav` on the 110m TDT head decodes (WER 0.0 vs NeMo) to
+exactly the following. This is the closed-loop assertion and the quickest smoke
+test that a build is correct on any backend (CPU, Metal, CUDA):
+
+> Well, I don't wish to see it any more, observed Phoebe, turning away her eyes. It is certainly very like the old portrait.
 
 ## GGUF schema
 

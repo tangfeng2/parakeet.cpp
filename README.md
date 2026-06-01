@@ -82,6 +82,14 @@ cmake --build build-shared -j
 | `PARAKEET_GGML_VULKAN`   | OFF     | Forward GGML_VULKAN to the submodule       |
 | `PARAKEET_GGML_HIP`      | OFF     | Forward GGML_HIP (ROCm) to the submodule   |
 
+To build for a GPU backend, forward its flag, e.g. Apple Metal:
+
+```sh
+cmake -B build -DPARAKEET_GGML_METAL=ON && cmake --build build -j
+```
+
+The CLI auto-selects the first GPU device the ggml registry reports, so no runtime flag is needed (set `PARAKEET_DEVICE=cpu` to force CPU). Ops the chosen backend has no kernel for run on the CPU automatically, so a model always runs even when one op lacks a GPU kernel. On an Apple M4, Metal is up to about 5x faster than CPU on the larger models; see [Apple Metal](benchmarks/BENCHMARK.md#apple-metal-m4).
+
 ---
 
 ## Python environment setup

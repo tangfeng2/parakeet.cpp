@@ -38,8 +38,11 @@ struct PendingCapture {
 } // namespace
 
 struct Backend::Impl {
-    ggml_backend_t    backend  = nullptr;
-    ggml_gallocr_t    galloc   = nullptr;   // created lazily, reused across calls
+    ggml_backend_t       backend     = nullptr;  // primary device (GPU or CPU)
+    ggml_backend_t       cpu_backend = nullptr;  // fallback backend (GPU path only)
+    ggml_gallocr_t       galloc      = nullptr;  // CPU / single-backend path (unchanged)
+    ggml_backend_sched_t sched       = nullptr;  // GPU path: schedules over {backend, cpu_backend}
+    bool                 use_sched   = false;    // true only when `backend` is a GPU device
     // Inputs registered by the build lambda for the IN-FLIGHT compute. Copied
     // into the gallocr-allocated tensors after ggml_gallocr_alloc_graph, then
     // cleared. Never overlaps across calls (compute is not re-entrant).
@@ -71,6 +74,7 @@ Backend::Backend(int n_threads) : impl_(new Impl()) {
                 impl_->backend = ggml_backend_dev_init(dev, nullptr);
                 if (impl_->backend) {
                     device_name_ = ggml_backend_dev_name(dev);
+                    impl_->use_sched = true;   // GPU device: route compute through ggml_backend_sched
                     PK_LOG("pk::Backend using GPU device: %s", device_name_.c_str());
                     break;
                 }
@@ -85,16 +89,27 @@ Backend::Backend(int n_threads) : impl_(new Impl()) {
         PK_LOG("backend init returned null");
         return;
     }
+    // GPU path: create a CPU fallback backend so unsupported ops (e.g. CONV_2D_DW,
+    // which ggml's Metal backend lacks) are offloaded to CPU by the scheduler
+    // instead of aborting. The CPU/single-backend path keeps using the persistent
+    // gallocr below and is untouched.
+    if (impl_->use_sched) {
+        impl_->cpu_backend = ggml_backend_cpu_init();
+        if (!impl_->cpu_backend) {
+            PK_LOG("pk::Backend: CPU fallback init failed; disabling sched");
+            impl_->use_sched = false;
+        }
+    }
     set_n_threads(n_threads);
 }
 
 Backend::~Backend() {
     if (impl_) {
-        // Free the gallocr BEFORE the backend: the gallocr owns the compute
-        // scratch buffer (allocated via the backend's buffer_type). Matches
-        // rt-detr's teardown order.
-        if (impl_->galloc) ggml_gallocr_free(impl_->galloc);
-        if (impl_->backend) ggml_backend_free(impl_->backend);
+        // Free allocators/scheduler BEFORE the backends they reference.
+        if (impl_->sched)       ggml_backend_sched_free(impl_->sched);
+        if (impl_->galloc)      ggml_gallocr_free(impl_->galloc);
+        if (impl_->cpu_backend) ggml_backend_free(impl_->cpu_backend);
+        if (impl_->backend)     ggml_backend_free(impl_->backend);
         delete impl_;
         impl_ = nullptr;
     }
@@ -104,6 +119,9 @@ void Backend::set_n_threads(int n_threads) {
     n_threads_ = n_threads > 0 ? n_threads : 1;
     if (impl_ && impl_->backend && ggml_backend_is_cpu(impl_->backend)) {
         ggml_backend_cpu_set_n_threads(impl_->backend, n_threads_);
+    }
+    if (impl_ && impl_->cpu_backend) {
+        ggml_backend_cpu_set_n_threads(impl_->cpu_backend, n_threads_);
     }
 }
 
@@ -168,22 +186,64 @@ bool Backend::compute(const std::function<ggml_tensor*(ggml_context*)>& build,
         ggml_build_forward_expand(gf, pc.tensor);
     ggml_build_forward_expand(gf, output);
 
-    // Lazily create the persistent gallocr (reused on every subsequent call; it
-    // only reallocates the underlying buffer when the graph grows beyond the
-    // current high-water mark).
-    if (!impl_->galloc) {
-        impl_->galloc = ggml_gallocr_new(
-            ggml_backend_get_default_buffer_type(impl_->backend));
-        if (!impl_->galloc) {
-            PK_LOG("Backend::compute: ggml_gallocr_new failed");
-            impl_->pending.clear();
-            impl_->captures.clear();
-            ggml_free(ctx);
-            return false;
+    // GPU devices default to the fast persistent-gallocr path (identical to a
+    // single-backend run). Only route THIS graph through the scheduler (which
+    // offloads unsupported ops to CPU) when the GPU backend actually lacks a
+    // kernel for one of its ops. CUDA covers every op parakeet uses, so it stays
+    // on gallocr with zero scheduler overhead; Metal likewise once its kernels
+    // are present; a genuinely missing op still degrades gracefully to CPU. The
+    // per-graph check is a cheap O(nodes) scan, far less than a sched re-plan.
+    bool need_sched = false;
+    if (impl_->use_sched) {
+        const int n_nodes = ggml_graph_n_nodes(gf);
+        for (int i = 0; i < n_nodes; ++i) {
+            if (!ggml_backend_supports_op(impl_->backend, ggml_graph_node(gf, i))) {
+                need_sched = true;
+                break;
+            }
         }
     }
-    if (!ggml_gallocr_alloc_graph(impl_->galloc, gf)) {
-        PK_LOG("Backend::compute: ggml_gallocr_alloc_graph failed");
+
+    bool alloc_ok = false;
+    if (need_sched) {
+        // GPU path: schedule across {GPU, CPU}. Unsupported ops fall back to CPU.
+        if (!impl_->sched) {
+            ggml_backend_t backs[2] = { impl_->backend, impl_->cpu_backend };
+            impl_->sched = ggml_backend_sched_new(
+                backs, /*bufts=*/nullptr, /*n_backends=*/2,
+                /*graph_size=*/kGraphSize, /*parallel=*/false, /*op_offload=*/true);
+            if (!impl_->sched) {
+                PK_LOG("Backend::compute: ggml_backend_sched_new failed");
+                impl_->pending.clear();
+                impl_->captures.clear();
+                ggml_free(ctx);
+                return false;
+            }
+        }
+        ggml_backend_sched_reset(impl_->sched);
+        alloc_ok = ggml_backend_sched_alloc_graph(impl_->sched, gf);
+        if (!alloc_ok) PK_LOG("Backend::compute: ggml_backend_sched_alloc_graph failed");
+    } else {
+        // Fast path: CPU, or a GPU whose backend supports every op in this graph.
+        // Persistent gallocr over the active backend's buffer type, lazily created
+        // and reused on every subsequent call (it only reallocates the underlying
+        // buffer when the graph grows beyond the current high-water mark). This is
+        // the original single-backend path; weights stay zero-copy on the device.
+        if (!impl_->galloc) {
+            impl_->galloc = ggml_gallocr_new(
+                ggml_backend_get_default_buffer_type(impl_->backend));
+            if (!impl_->galloc) {
+                PK_LOG("Backend::compute: ggml_gallocr_new failed");
+                impl_->pending.clear();
+                impl_->captures.clear();
+                ggml_free(ctx);
+                return false;
+            }
+        }
+        alloc_ok = ggml_gallocr_alloc_graph(impl_->galloc, gf);
+        if (!alloc_ok) PK_LOG("Backend::compute: ggml_gallocr_alloc_graph failed");
+    }
+    if (!alloc_ok) {
         impl_->pending.clear();
         impl_->captures.clear();
         ggml_free(ctx);
@@ -196,7 +256,9 @@ bool Backend::compute(const std::function<ggml_tensor*(ggml_context*)>& build,
     }
     impl_->pending.clear();
 
-    enum ggml_status status = ggml_backend_graph_compute(impl_->backend, gf);
+    enum ggml_status status = need_sched
+        ? ggml_backend_sched_graph_compute(impl_->sched, gf)
+        : ggml_backend_graph_compute(impl_->backend, gf);
     if (status != GGML_STATUS_SUCCESS) {
         PK_LOG("Backend::compute: ggml_backend_graph_compute failed (status=%d)",
                (int)status);

@@ -116,6 +116,41 @@ Decode batching coalesces the per-step prediction-LSTM and joint-network GEMMs a
 | tdt_ctc-1.1b | 1.00× | 3.45× | 6.50× | 11.47× | 746.9 |
 | tdt_ctc-110m | 1.01× | 3.29× | 6.33× | 10.89× | 1259.7 |
 
+## Apple Metal (M4)
+
+parakeet.cpp runs on Apple GPUs through ggml's Metal backend
+(`-DPARAKEET_GGML_METAL=ON`). The encoder runs on the GPU; ops without a Metal
+kernel fall back to CPU automatically, so any model runs.
+
+Apple M4, macOS 26.5. q4_k weights, one 7.4 s clip, best-of-6 steady-state runs
+(model load and one-time pipeline compilation excluded), via `parakeet-cli bench`.
+RTFx is audio seconds per second of compute; higher is faster.
+
+| Model | Metal | CPU | Speedup |
+|---|---|---|---|
+| ctc-0.6b | 91.1 | 16.9 | 5.4× |
+| ctc-1.1b | 56.2 | 10.0 | 5.6× |
+| parakeet-tdt_ctc-110m | 99.4 | 65.5 | 1.5× |
+| realtime_eou_120m-v1 | 76.5 | 58.6 | 1.3× |
+| rnnt-0.6b | 53.0 | 20.3 | 2.6× |
+| rnnt-1.1b | 39.4 | 12.4 | 3.2× |
+| tdt-0.6b-v2 | 57.1 | 20.1 | 2.8× |
+| tdt-0.6b-v3 | 54.3 | 19.8 | 2.7× |
+| tdt-1.1b | 43.8 | 12.6 | 3.5× |
+| tdt_ctc-110m | 103.1 | 65.9 | 1.6× |
+| tdt_ctc-1.1b | 41.9 | 12.5 | 3.4× |
+
+Metal helps most on the larger models (about 3× to 5×). The 110m and 120m models
+stay closer to CPU because their short encoders are dominated by per-run fixed
+costs. Two ops the FastConformer encoder needs ship as native Metal kernels here:
+the subsampling depthwise conv (`CONV_2D_DW`) and the conv module's leading-side
+time padding (`PAD`); with these the encoder layers run entirely on the GPU. The
+only work left on the CPU is the one-time log-mel front end: its ops all have
+Metal kernels, but the scheduler keeps that small, once-per-clip subgraph (a
+couple of matmuls plus a log over host-resident inputs) on the CPU rather than
+uploading it, which for its size is the faster choice. Reproduce with
+`scripts/bench_metal_dw.sh <model.gguf> <clip.wav>`.
+
 ## Plots
 
 ### RTFx per model — NeMo vs ours (all dtypes), LibriSpeech
