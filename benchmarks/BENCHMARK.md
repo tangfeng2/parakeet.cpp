@@ -85,6 +85,18 @@ Host: AMD Ryzen 9 9950X3D (20 cores), CPU-only. NeMo 2.8.0rc0.
 
 Accuracy is **WER 0 vs NeMo**: the f32 and q8_0 transcripts are byte-identical to NeMo's on the timed runs (agreement WER 0.0000%), so the speed numbers compare equal work. parakeet.cpp is **2.40× faster than NeMo at f32** and **2.52× at q8_0**.
 
+On the GPU (NVIDIA GB10, same single clip and 7-pass median, both engines on the device), parakeet.cpp still wins, with a smaller margin than on CPU. NeMo runs natively on the GB10 here via torch 2.11 + cu128 (no nvcr container needed), and its RNN-T greedy decode is CUDA-graph accelerated, so the gap narrows. The larger GPU wins in this repo come from the TDT and hybrid models, where NeMo falls back to a slower per-step Python loop; nemotron is RNN-T, so it does not hit that path.
+
+Host: NVIDIA GB10 Grace-Blackwell (sm_121), CUDA 13. NeMo main, torch 2.11.0+cu128.
+
+| Engine | RTFx | Speedup vs NeMo | Agreement WER vs NeMo |
+|---|---|---|---|
+| NeMo (PyTorch GPU) | 91.8 | 1.00× | reference |
+| parakeet.cpp f32 | 106.5 | 1.16× | 0.0000% |
+| parakeet.cpp q8_0 | 119.8 | 1.30× | 0.0000% |
+
+The transcripts are byte-identical to NeMo's on GPU as well (WER 0).
+
 Streaming path (f32, cache-aware): compute RTFx **3.80** (median wall 2503 ms over the 7.43 s clip, one-time model load of 548 ms subtracted). Streaming is latency-oriented: it runs many small chunked forward passes rather than one offline pass, so its RTFx sits well below the offline number by design while staying several times real time. The streaming transcript matches the offline and NeMo transcripts.
 
 ## Quantization — size / speed / accuracy tradeoff
